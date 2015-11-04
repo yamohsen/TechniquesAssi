@@ -1,19 +1,24 @@
-TEMPLATE = app
+#Target is the name of the exe
+TARGET=PlyToObject
 
-QT += qml quick widgets
+#Where to put .o files $$PWD means in proj dir
+OBJECTS_DIR=$$PWD/obj
 
-SOURCES += main.cpp \
-    ImageWrite.cpp \
-    PLYFile.cpp
+#Now set some QMAKE settings
+#Don't build against qt libs
+CONFIG-=qt
 
-RESOURCES += qml.qrc
+#Use C++ 11
+CONFIG+=c++11
+#DEFINES+=NDEBUG
 
-# Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
+#Add Source Files
+SOURCES +=$$PWD/src/main.cpp \
+          $$PWD/src/ImageWrite.cpp \
+          $$PWD/src/PLYFile.cpp
 
-# Default rules for deployment.
-include(deployment.pri)
+#Add header files
+HEADERS +=$$PWD/include/ImageWrite.h \
+          $$PWD/include/PLYFile.h
 
-HEADERS += \
-    ImageWrite.h \
-    PLYFile.h
+INCLUDEPATH+=$$PWD/include
