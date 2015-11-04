@@ -10,6 +10,7 @@ public :
   ImageWrite(int _w, int _h);
   ~ImageWrite();
   void save(const std::string &_fname);
+  void load(const std::string &_fname);
   void setPixel(int _x, int _y, unsigned char _r,
                 unsigned char _g, unsigned char _b);
   void clear(unsigned char _r, unsigned char _g, unsigned char _b);

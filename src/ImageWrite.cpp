@@ -30,7 +30,7 @@ void ImageWrite::load(const std::string &_fname){
     exit(EXIT_FAILURE);
   }
 //read Header
-  if(std::getLine(input, inputString)){
+  if(std::getline(input, inputString)){
     if(inputString.find("ply") < 0 && inputString.find("PLY") < 0){
       std::cout <<"This is not a ply file: "<< _fname <<std::endl;
       exit(EXIT_FAILURE);

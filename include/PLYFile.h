@@ -7,6 +7,15 @@
 class PLYFile
 {
 public:
+
+  struct Property{
+    std::string propertyType;
+    std::string numberInListType;
+    std::string list;
+    std::string propertyName;
+  };
+
+
   PLYFile();
   struct ElementType{
     std::string m_name;
@@ -19,15 +28,10 @@ public:
     void * properties;
   };
 
-  struct Property{
-    std::string propertyType;
-    std::string numberInListType;
-    std::string list;
-    std::string propertyName;
-  };
+
 
  private:
-  std::String m_fileFormat;
+  std::string m_fileFormat;
   ElementType *m_elementTypes;
   Element *m_elements;
 

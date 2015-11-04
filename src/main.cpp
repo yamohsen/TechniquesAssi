@@ -1,10 +1,9 @@
-#include <QApplication>
-#include <QQmlApplicationEngine>
+#include<iostream>
 
-//int main()
-//{
+int main()
+{
 
-//    return EXIT_SUCCESS;
-//}
+    return EXIT_SUCCESS;
+}
 
 
