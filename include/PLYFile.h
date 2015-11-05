@@ -8,6 +8,11 @@ class PLYFile
 {
 public:
 
+  PLYFile();
+
+  PLYFile readFile(ifstream);
+
+
   struct Property{
     std::string propertyType;
     std::string numberInListType;
@@ -15,8 +20,6 @@ public:
     std::string propertyName;
   };
 
-
-  PLYFile();
   struct ElementType{
     std::string m_name;
     int count;
